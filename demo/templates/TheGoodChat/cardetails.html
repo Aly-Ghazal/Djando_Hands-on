@@ -1,0 +1,15 @@
+{% include 'Header.html' %}
+{% comment %} {% url '${some-url-name}' arg %} {% endcomment %}
+<div class="card" style="width:400px">
+  <img class="card-img-top" src="{{onecar.image.url}}" alt="Card image">
+  <div class="card-body">
+    <h4 class="card-title">Name: {{onecar.name}}</h4>
+    <p class="card-text">Descripion: {{onecar.descripion}}</p>
+    <p class="card-text">Price: {{onecar.price}}</p>
+    <p class="card-text">Color: {{onecar.color}}</p>
+      <form method="post">
+        {% csrf_token %}
+    <a href="{% url 'cars' %}" class="btn btn-primary">Show all cars</a>
+      </form>
+  </div>
+</div>

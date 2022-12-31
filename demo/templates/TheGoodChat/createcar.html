@@ -1,0 +1,14 @@
+{% include "Header.html" %}
+<style>
+input{
+    display: black;
+    width: 100%;
+    margin: 15px auto;
+    padding: 20px;
+}
+</style>
+<form action="" method="POST" enctype="multipart/form-data">
+{% csrf_token %}
+{{Form}}
+<input type="submit" value="Save Car" />
+</form>

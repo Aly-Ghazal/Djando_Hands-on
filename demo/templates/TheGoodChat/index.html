@@ -1,0 +1,38 @@
+<html>
+{% load static %}
+
+<head>
+
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+
+
+<body>
+{% include 'Header.html' %}
+<h1>Brothers and Sisters are you with me </h1>
+<table style="width:100%">
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Salary</th>
+    </tr>
+    {% for user in Data %}
+    <tr>
+      <td>{{user.Name}}</td>
+      <td>{{user.Age}}</td>
+      <td>{{user.salary}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+{% include 'Footer.html' %}
+</html>
